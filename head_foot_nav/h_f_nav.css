@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 头部样式 */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    margin: 0px auto;
+    width: 1420px;
+    height: 75px;
+    border-bottom: 1px solid rgb(181, 181, 181);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* logo */
+.logo {
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: right;
+}
+
+.logo img {
+    height: 50px;
+    margin-top: 12.5px;
+}
+
+/* 中部导航栏 */
+.head_nav {
+    float: left;
+    width: 40%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head_nav li:hover a {
+    color: rgb(241, 88, 11);
+}
+
+/* 搜索 注册 登录 */
+.search_log_reg {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 搜索 */
+.search {
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgb(185, 181, 181);
+    box-sizing: border-box;
+    border-radius: 37.5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search_log_reg span {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid red;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: red;
+    cursor: pointer;
+}
+
+/* 搜索图标按钮 */
+.search span {
+    margin-right: 10px;
+    height: 25px;
+    width: 25px;
+    background: url(./img/search.png) no-repeat center center;
+    background-size: 25px;
+    border: none;
+}
+
+/* 底部导航栏 */
+.footer{
+    position: relative;
+    margin:0px auto;
+    width: 1420px;
+    height: 360px;
+    background-color: rgb(50, 50, 50);
+    display: flex;
+}
+.foot_left{
+    width: 30%;
+    height: 100%;
+    text-align: right;
+}
+.foot_left img{
+    margin: 30px 20px 0px 0px;
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+}
+.foot_center{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.foot_center a{
+    color: #a3a3a3;
+}
+.foot_logo{
+    padding-top: 30px; 
+    box-sizing: border-box;
+    width: 20%;
+    height: 100%;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.foot_logo ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+.foot_nav{
+    width: 80%;
+    padding-top: 30px; 
+    box-sizing: border-box;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.foot_nav ul{
+    list-style: none;
+}
+.foot_nav>li{
+    font-size: 16px;
+    color: white;
+}
+.foot_nav>li ul{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.foot_nav>li>ul>li{
+    margin-top: 5px;
+}
+.foot_right{
+    width: 20%;
+    height: 100%;
+}
+.footer::before{
+    content: "@ 2016 极果版权所有";
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #a3a3a3;
+}
