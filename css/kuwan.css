@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 主体 */
+#main {
+    width: 100%;
+    height: max-content;
+}
+
+/* 内容 */
+.cont {
+    width: 100%;
+    height: max-content;
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+/* 标题 */
+.cont h1 {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 三个按钮 */
+.cont_btn {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.cont_btn span {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.cont_btn span:hover {
+    color: salmon;
+    border-bottom: 3px solid salmon;
+}
+
+/* 商品详情 */
+.comm{
+    width: 100%;
+    height: max-content;
+    background-color: rgb(247, 247, 247);
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+}
