@@ -1,0 +1,21 @@
+.main { width: 100%; height: 460px; background-color: #f7f7f7; margin-top: -20px; }
+
+.main .inner { width: 1050px; height: 410px; border: 1px solid #bebbbb; margin: 0px auto; -webkit-box-sizing: border-box; box-sizing: border-box; position: relative; top: 20px; background-color: white; border-radius: 10px; }
+
+.main .inner .top { width: 100%; height: 30px; padding-left: 20px; font-size: 20px; border-left: 4px solid red; -webkit-box-sizing: border-box; box-sizing: border-box; position: absolute; top: 20px; }
+
+.main .inner .bottom { width: 500px; height: 490px; position: absolute; top: 125px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+
+.main .inner .bottom input { width: 300px; height: 40px; background-color: #eeeeee; border-radius: 5px; margin-top: 20px; border: none; padding-left: 5px; }
+
+.main .inner .bottom .yanzheng { width: 230px; display: inline-block; }
+
+.main .inner .bottom img { width: 100px; height: 40px; margin-top: 20px; margin-left: 10px; position: absolute; }
+
+.main .inner .bottom button { width: 120px; height: 40px; margin-top: 10px; margin-left: 10px; border-radius: 5px; border: 1px solid #a3a2a2; color: grey; }
+
+.main .inner .bottom .denglu { background-color: #f65140; color: white; font-size: 15px; }
+
+.main .inner .bottom span { font-size: 12px; margin-left: 5px; }
+
+.main .inner .bottom .yan { margin-left: 130px; font-size: 12px; }
