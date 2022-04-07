@@ -7,6 +7,11 @@
 #main {
     width: 100%;
     height: max-content;
+    background-color: rgb(50, 50, 50);
+}
+.head_h{
+    width: 100%;
+    background-color: #fff;
 }
 
 /* 内容 */
@@ -15,6 +20,7 @@
     height: max-content;
     padding-top: 40px;
     overflow: hidden;
+    background-color: #fff;
 }
 
 /* 标题 */
@@ -110,4 +116,13 @@
 }
 .xin img{
     width: 20px;
+}
+/* 加载 */
+.load{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    font-size: 16px;
+    color: salmon;
+    padding-bottom: 40px;
 }
