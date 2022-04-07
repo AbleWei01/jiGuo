@@ -8,6 +8,7 @@
     <title>发现酷玩</title>
     <link rel="stylesheet" href="./css/h_f_nav.css">
     <link rel="stylesheet" href="./css/kuwan.css">
+    <script src="./js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
             <h1>发现酷玩</h1>
             <!-- 按钮 -->
             <div class="cont_btn">
-                <span>最新</span>
+                <span click="new_()">最新</span>
                 <span>最热</span>
                 <span>品类</span>
             </div>
@@ -51,17 +52,16 @@
                 <div class="comm_big">
                     <div class="comm_small">
                         <img src="./img/bg5.jpg" alt="">
-                        <p class="comm_title">
-                        <h4>SCIO</h4>
-                        <span>可以检测</span>
-                        </p>
-                        <div class="prcie">
+                        <div class="comm_title">
+                            <h4>SCIO</h4>
+                            <span>可以检测</span>
+                        </div>
+                        <div class="price">
                             <span>￥</span>
-                            <span>1212</span>
-                            <span>标签</span>
-                            <span>3</span>
-                            <span>标签</span>
-                            <span>3</span>
+                            <div class="xin">
+                                <span><img src="./img/xin.png"></span>
+                                <span><img src="./img/reply.png"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,5 +69,46 @@
         </div>
     </div>
 </body>
+<script src="./js/template-web.js"></script>
+<script type="text/html" id="tpl">
+    {{each res1}}
+        <div class="comm_small">
+            <img src="{{$value.img}}">
+            <div class="comm_title">
+                <h4>{{$value.description}}</h4>
+                <span>{{$value.text}}</span>
+            </div>
+            <div class="price">
+                <span>{{$value.price}}</span>
+                <div class="xin">
+                    <span><img src="./img/xin.png">{{$value.like}}</span>
+                    <span><img src="./img/reply.png">{{$value.words}}</span>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+<script>
+    function new_() {
+        $.ajax({
+            type: "get",
+            url: "http://127.0.0.1:3000/play/hot",
+            success: (function (res) {
+                var res1 = []//双重循环得到数组中的数据
+                for (var item of res) {
+                    for (var i of item) {
+                        res1.push(i);
+                    }
+                }
+                const kuwan_new = template('tpl', {
+                    res1: res1
+                })
+                // console.log(res1)
+                $(".comm .comm_big").html(kuwan_new);//渲染到页面
+            })
+        })
+    }
+    new_();
+</script>
 
 </html>
