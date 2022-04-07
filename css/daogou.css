@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 主体 */
+#main {
+    width: 100%;
+    height: max-content;
+    background-color: rgb(50, 50, 50);
+}
+
+.head_h {
+    width: 100%;
+    background-color: #fff;
+}
+
+/* 内容 */
+.cont {
+    width: 100%;
+    height: max-content;
+    padding-top: 40px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* 标题 */
+.cont h1 {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 三个按钮 */
+.cont_btn {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.cont_btn span {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.cont_btn .col {
+    color: salmon;
+    border-bottom: 3px solid salmon;
+}
+
+/* 商品详情 */
+.comm {
+    width: 100%;
+    height: max-content;
+    background-color: rgb(247, 247, 247);
+    padding: 20px 0px;
+    /* display: flex;
+    justify-content: space-around; */
+}
+
+.comm_big {
+    margin: auto;
+    width: 1100px;
+    height: max-content;
+    /* overflow: hidden; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* 单个商品 */
+.comm_small {
+    width: 240px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.comm_small img {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.comm_title {
+    width: 100%;
+    height: 60px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+
+.comm_title span {
+    font-size: 14px;
+}
+
+.price {
+    width: 100%;
+    padding-left: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: red;
+}
+
+.xin {
+    float: right;
+    margin-right: 8px;
+    color: rgb(154, 154, 154);
+}
+
+.xin img {
+    width: 20px;
+}
+
+/* 加载 */
+.load {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    font-size: 16px;
+    color: salmon;
+    padding-bottom: 40px;
+}
+
+.load span {
+    cursor: pointer;
+}
