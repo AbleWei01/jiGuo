@@ -9,7 +9,8 @@
     height: max-content;
     background-color: rgb(50, 50, 50);
 }
-.head_h{
+
+.head_h {
     width: 100%;
     background-color: #fff;
 }
@@ -48,7 +49,7 @@
     cursor: pointer;
 }
 
-.cont_btn span:hover {
+.cont_btn .col {
     color: salmon;
     border-bottom: 3px solid salmon;
 }
@@ -73,6 +74,10 @@
     justify-content: space-around;
 }
 
+.comm_life{
+    margin: auto;
+    width: 1100px;
+}
 /* 单个商品 */
 .comm_small {
     width: 240px;
@@ -81,7 +86,8 @@
     border-radius: 8px;
     margin-bottom: 20px;
 }
-.comm_small:nth-of-type(4){
+
+.comm_small:nth-of-type(4) {
     margin-right: 0px;
 }
 
@@ -114,15 +120,90 @@
     margin-right: 8px;
     color: rgb(154, 154, 154);
 }
-.xin img{
+
+.xin img {
     width: 20px;
 }
+
+/* 品类样式 */
+.life,
+.nurse,
+.health,
+.apparel,
+.trip,
+.outdoors,
+.photo,
+.phone {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 25px 0px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.tit {
+    width: 100%;
+    height: 30px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    /* line-height: 30px; */
+}
+
+.life_s,
+.nurse_s,
+.health_s,
+.apparel_s,
+.trip_s,
+.outdoors_s,
+.photo_s,
+.phone_s {
+    width: 100%;
+    box-sizing: border-box;
+    list-style: none;
+    padding: 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.life_s li,
+.nurse_s li,
+.health_s li,
+.apparel_s li,
+.trip_s li,
+.outdoors_s li,
+.photo_s li,
+.phone_s li {
+    width: 150px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.life_s li img,
+.nurse_s li img,
+.health_s li img,
+.apparel_s li img,
+.trip_s li img,
+.outdoors_s li img,
+.photo_s li img,
+.phone_s li img {
+    width: 130px;
+}
+
 /* 加载 */
-.load{
+.load {
     width: 100%;
     text-align: center;
     background-color: rgb(247, 247, 247);
     font-size: 16px;
     color: salmon;
     padding-bottom: 40px;
+}
+
+.load span {
+    cursor: pointer;
 }
