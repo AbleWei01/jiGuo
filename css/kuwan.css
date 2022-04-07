@@ -48,11 +48,28 @@
 }
 
 /* 商品详情 */
-.comm{
+.comm {
     width: 100%;
     height: max-content;
     background-color: rgb(247, 247, 247);
     padding: 20px 0px;
-    display: flex;
-    justify-content: space-around;
+    /* display: flex;
+    justify-content: space-around; */
+}
+.comm_big{
+    margin: auto;
+    width: 1200px;
+    height: max-content;
+}
+/* 单个商品 */
+.comm_small {
+    width: 220px;
+    height: 230px;
+}
+
+.comm_small img {
+    width: 100%;
+}
+.comm_title{
+    width: 100%;
 }
