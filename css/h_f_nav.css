@@ -85,7 +85,7 @@ a {
     margin-right: 10px;
     height: 25px;
     width: 25px;
-    background: url(./img/search.png) no-repeat center center;
+    background: url(../img/search.png) no-repeat center center;
     background-size: 25px;
     border: none;
 }
