@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/home.css">
     <script src="./js/swiper-bundle.js"></script>
+    <script src="./js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -58,18 +59,193 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide a">
                         <h2>热门试用</h2>
-                        <div class="trial"></div>
+                        <div class="trial">
+                            <!-- 插入位置 -->
+                        </div>
                     </div>
                     <div class="swiper-slide b">
-                        
+                        <h2>热门试用</h2>
+                        <div class="trial">
+                            <!-- 插入位置 -->
+                        </div>
                     </div>
                 </div>
                 <!-- 导航按钮 -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev left_btn"></div>
+                <div class="swiper-button-next right_btn"></div>
             </div>
         </div>
-    </div>
+        <!-- 报告精选 -->
+        <div class="repor">
+            <div class="tit">
+                <h3>报告精选</h3>
+                <p>发现更多<span></span></p>
+            </div>
+            <div class="repor_s">
+                <!-- 报告精选插入位置 -->
+            </div>
+        </div>
+        <!-- 导购精选 -->
+        <div class="guid">
+            <div class="tit">
+                <h3>报告精选</h3>
+                <p>发现更多<span></span></p>
+            </div>
+            <div class="guid_s">
+                <!-- 插入位置 -->
+            </div>
+        </div>
+        <!-- 发现酷玩 -->
+        <div class="play">
+            <div class="tit">
+                <h3>发现酷玩</h3>
+                <p>发现更多<span></span></p>
+            </div>
+            <div class="play_s">
+                <!-- 插入位置-->
+            </div>
+        </div>
+        <!-- 加载更多...... -->
+        <div class="load">
+            <span>加载更多...</span>
+        </div>
+        <!-- 底部导航栏 -->
+        <div class="footer_nav">
+
+            <div class="footer">
+                <div class="foot_left">
+                    <img src="./img/myCode.jpg" alt="">
+                </div>
+                <div class="foot_center">
+                    <div class="foot_logo">
+                        <ul>
+                            <li><a href="#">
+                                    <img src="./img/logoImg.jpg" alt="">
+                                </a></li>
+                            <li><a href="#">
+                                    全球酷玩试用导购平台<br>
+                                    酷·新奇·好玩·品质
+                                </a></li>
+                            <li><a href="#">
+                                    微信添加“JguoJguo”<br>
+                                    获取我们的服务。
+                                </a></li>
+                        </ul>
+                    </div>
+                    <ul class="foot_nav">
+                        <li>免费试用
+                            <ul>
+                                <li><a href="#">试用流程</a></li>
+                                <li><a href="#">如何提高成功率</a></li>
+                            </ul>
+                        </li>
+                        <li>友情链接
+                            <ul>
+                                <li><a href="#">智东西 WEIBUSI</a></li>
+                                <li><a href="#">搜狐IT 腾讯科技</a></li>
+                                <li><a href="#">搜狐数码 凤凰科技</a></li>
+                                <li><a href="#">凤凰数码 PConline</a></li>
+                                <li><a href="#">泡泡网 3W咖啡</a></li>
+                                <li><a href="#">ZUK社区 亿觅emie</a></li>
+                                <li><a href="#">极客公园 易迅易启玩</a></li>
+                                <li><a href="#">果库</a></li>
+                            </ul>
+                        </li>
+                        <li>购买攻略
+                            <ul>
+                                <li><a href="#">美亚海淘购</a></li>
+                                <li><a href="#">日亚海淘购</a></li>
+                                <li><a href="#">海淘转运攻略</a></li>
+                                <li><a href="#">kickstarter 众筹购买攻略</a></li>
+                                <li><a href="#">indiegogo 众筹购买攻略</a></li>
+                            </ul>
+                        </li>
+                        <li>厂商合作
+                            <ul>
+                                <li><a href="#">关于极果</a></li>
+                                <li><a href="#">联系我们</a></li>
+                                <li><a href="#">商务合作：BD@jiguo.com</a></li>
+                                <li><a href="#">CEO邮箱：CEO@jiguo.com</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 </body>
+<script src="./js/template-web.js"></script>
+<script type="text/html" id="tpl">
+<!-- 轮播图渲染 -->
+{{each res}}
+<div class="trial_t">
+    <a href="#">
+        <img src="{{$value.img}}">
+        <h3>{{$value.text}}</h3>
+        <p class="nums">
+            <span>{{$value.totalnum}}</span>
+            <span>{{$value.num}}台</span>
+        </p>
+        <p class="apply">
+            <span>{{$value.apply}}</span>
+            申请
+        </p>
+        <p class="date">
+            剩余时间：2天
+        </p>
+    </a>
+</div>
+{{/each}}
+<!-- 报告精选渲染 -->
+{{each res_repor_}}
+<div class="repor_comm">
+    <a href="#">
+        <img src="{{$value.img}}" alt="">
+        <p>{{$value.text}}</p>
+        <div class="xin">
+            <p>·{{$value.uName}}</p>
+            <p>
+                <span><img src="./img/xin.png">{{$value.apply}}</span>
+                <span><img src="./img/reply.png">{{$value.num}}</span>
+            </p>
+        </div>
+    </a>
+</div>
+{{/each}}
+<!-- 导购精选渲染 -->
+{{each res_guid_}}
+<div class="guid_comm">
+    <a href="#">
+        <img src="{{$value.img}}" alt="">
+        <p>{{$value.text}}</p>
+        <div class="xin">
+            <p>
+                <span><img src="./img/xin.png">{{$value.like}}</span>
+                <span><img src="./img/reply.png">{{$value.words}}</span>
+            </p>
+        </div>
+    </a>
+</div>
+{{/each}}
+<!-- 发现酷玩渲染 -->
+{{each res_play_}}
+<div class="play_comm">
+    <a href="#">
+        <img src="{{$value.img}}">
+        <div class="play_tit">
+            <h3>{{$value.description}}</h3>
+            <p>{{$value.text}}</p>
+        </div>
+        <div class="xin">
+            <p>{{$value.price}}</p>
+            <p>
+                <span><img src="./img/xin.png">{{$value.like}}</span>
+                <span><img src="./img/reply.png">{{$value.words}}</span>
+            </p>
+        </div>
+    </a>
+</div>
+{{/each}}
+</script>
 <script src="./js/home.js"></script>
+
 </html>

@@ -75,6 +75,7 @@
 }
 
 .comm_life{
+    display: none;
     margin: auto;
     width: 1100px;
 }
@@ -126,6 +127,7 @@
 }
 
 /* 品类样式 */
+
 .life,
 .nurse,
 .health,
