@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 主体 */
+#main {
+    width: 100%;
+    height: max-content;
+    background-color: rgb(50, 50, 50);
+}
+
+.head_h {
+    width: 100%;
+    background-color: #fff;
+}
+
+/* 内容 */
+.cont {
+    width: 100%;
+    height: max-content;
+    padding-top: 40px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* 标题 */
+.cont h1 {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 三个按钮 */
+.cont_btn {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.cont_btn span {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.cont_btn .col {
+    color: salmon;
+    border-bottom: 3px solid salmon;
+}
+
+/* 商品详情 */
+.comm {
+    width: 100%;
+    height: max-content;
+    background-color: rgb(247, 247, 247);
+    padding-bottom: 20px;
+}
+/* 四个按钮 */
+.comm_btn{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    color: rgb(204, 204, 204);
+    border: 1px solid rgb(204, 204, 204);
+    box-sizing: border-box;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+}
+.comm_btn span{
+    margin-right: 50px;
+    cursor: pointer;
+}
+.comm_btn .coll{
+    color: black;
+}
+/* 商品 */
+.goods_{
+    width: 100%;
+    padding: 30px;
+    /* background-color: rgb(247, 247, 247); */
+    background-color: rgb(206, 175, 175);
+}
+.goods_g{
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.aaa{
+    position: relative;
+    width: 230px;
+    height: 290px;
+    background-color: #fff;
+    border: .1px solid rgb(207, 206, 206);
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.posi{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 5px;
+    background-color: red;
+    color: #fff;
+    border-radius: 0px 0px 0px 5px;
+}
+.aaa a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aaa a img{
+    width: 230px;
+}
+.aaa a h3{
+    padding: 6px 0px;
+    box-sizing: border-box;
+}
+.aaa .aaa_btn span{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    border: 1px solid rgb(207, 206, 206);
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: rgb(207, 206, 206);
+    margin-right: 15px;
+}
+.aaa .aaa_btn span:nth-last-of-type(1){
+    margin-right: 0px;
+}
+.apply{
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+.apply span{
+    color: red;
+}
+.nums{
+    font-size: 12px;
+    color: rgb(207, 206, 206);
+}
+/* 加载 */
+.load {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    font-size: 16px;
+    color: salmon;
+    padding-bottom: 40px;
+}
+
+.load span {
+    cursor: pointer;
+}
