@@ -15,6 +15,20 @@ var mySwiper = new Swiper('.swiper', {
         disableOnInteraction: false, //用户操作swiper时 是否停止自动切换 true是  false 否
     },
 })
+// 五一倒计时
+function date_() {
+    // 获取当前时间
+    var date = new Date();
+    var date2 = new Date(2022, 4, 1)//五一时间
+    var date3 = date2 - date;
+    var d = parseInt(date3 / 1000 / 60 / 60 / 24);//天
+    var h = parseInt(date3 / 1000 / 60 / 60 % 24);//小时
+    var m = parseInt(date3 / 1000 / 60 % 60);//分钟
+    var s = parseInt(date3 / 1000 % 60);//秒
+    var str=''+d + '天' + h + '时' + m + '分' + s + '秒';
+    $(".time_").text(str)
+}
+setInterval(date_,1000);
 // 轮播图热门试用内容数据
 function hot_() {
     $.ajax({
