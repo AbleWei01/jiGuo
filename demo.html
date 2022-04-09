@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>导购</title>
+    <title>试用</title>
     <link rel="stylesheet" href="./css/h_f_nav.css">
     <link rel="stylesheet" href="./css/demo.css">
     <script src="./js/jquery.min.js"></script>
@@ -15,7 +15,7 @@
     <!-- 主题 -->
     <div id="main">
         <!-- 头部导航栏 -->
-        <div class="head_h">
+        <div class="top_header">
             <div class="header">
                 <!-- logo -->
                 <a href="#" class="logo">
@@ -23,19 +23,19 @@
                 </a>
                 <!-- 中部导航栏 -->
                 <ul class="head_nav">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">酷玩</a></li>
-                    <li><a href="#">导购</a></li>
-                    <li><a href="#">使用</a></li>
-                    <li><a href="#">报告</a></li>
+                    <li><a href="./home.html">首页</a></li>
+                    <li><a href="./kuwan.html">酷玩</a></li>
+                    <li><a href="./daogou.html">导购</a></li>
+                    <li><a href="./demo.html">使用</a></li>
+                    <li><a href="./14resport.html">报告</a></li>
                 </ul>
                 <!-- 搜索 注册 登录 -->
                 <div class="search_log_reg">
                     <div class="search">
                         <span></span>
                     </div>
-                    <span>注册</span>
-                    <span>登录</span>
+                    <a href="./16register.html">注册</a>
+                    <a href="./15login.html">登录</a>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                 <ul class="foot_nav">
                     <li>免费试用
                         <ul>
-                            <li><a href="#">试用流程</a></li>
+                            <li><a href="./18freeTrial.html">试用流程</a></li>
                             <li><a href="#">如何提高成功率</a></li>
                         </ul>
                     </li>
@@ -122,7 +122,7 @@
                         <ul>
                             <li><a href="#">关于极果</a></li>
                             <li><a href="#">联系我们</a></li>
-                            <li><a href="#">商务合作：BD@jiguo.com</a></li>
+                            <li><a href="./17business.html">商务合作：BD@jiguo.com</a></li>
                             <li><a href="#">CEO邮箱：CEO@jiguo.com</a></li>
                         </ul>
                     </li>
@@ -137,7 +137,7 @@
     <!-- 全部 -->
     {{each res_all}}
     <div class="aaa">
-        <a href="#">
+        <a href="./12shiyongDetail.html">
             <img src="{{$value.img}}">
             <h3>{{$value.text}}</h3>
             <p class="aaa_btn"><span>{{$value.totalnum}}</span><span>{{$value.num}}台</span></p>
@@ -150,7 +150,7 @@
     <!-- 申请 -->
     {{each res_apply}}
     <div class="aaa">
-        <a href="#">
+        <a href="./12shiyongDetail.html">
             <img src="{{$value.img}}">
             <h3>{{$value.text}}</h3>
             <p class="aaa_btn"><span>{{$value.totalnum}}</span><span>{{$value.num}}台</span></p>
@@ -163,7 +163,7 @@
     <!-- 试用 -->
     {{each res_trail}}
     <div class="aaa">
-        <a href="#">
+        <a href="./12shiyongDetail.html">
             <img src="{{$value.img}}">
             <h3>{{$value.text}}</h3>
             <p class="aaa_btn"><span>{{$value.totalnum}}</span><span>{{$value.num}}台</span></p>
@@ -176,7 +176,7 @@
     <!-- 结束 -->
     {{each res_over}}
     <div class="aaa">
-        <a href="#">
+        <a href="./12shiyongDetail.html">
             <img src="{{$value.img}}">
             <h3>{{$value.text}}</h3>
             <p class="aaa_btn"><span>{{$value.totalnum}}</span><span>{{$value.num}}台</span></p>

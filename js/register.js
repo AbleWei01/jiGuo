@@ -55,7 +55,7 @@ $(function(){
     $(".itemRepassword input[name='repassword']").on("blur", function () {
         var password_ = $(".itemPassword input[name='password']").val();
         var repassword_ = $(".itemRepassword input[name='repassword']").val();
-        var reg2 = /^[\w\@]{6,10}$/;
+        var reg2 = /^[\w]{6,10}$/;
         if (repassword_ == '') {
             $(this).siblings().text("密码不能为空！");
         } else if (!reg2.test(repassword_)) {

@@ -29,9 +29,9 @@ $(function () {
         //console.log(phone1_,yanzheng1_,username1_,password1_,repassword1_);
         var str = '输入正确！'
         if(username1_==str && password1_==str){
-            alert("注册成功！");
+            alert("登录成功！");
         }else{
-            alert("注册失败！");
+            alert("登录失败！");
         }
         $(".itemUser input[name='username']").val("");
         $(".itemPassword input[name='password']").val("");

@@ -15,7 +15,7 @@
     <!-- 主题 -->
     <div id="main">
         <!-- 头部导航栏 -->
-        <div class="head_h">
+        <div class="top_header">
             <div class="header">
                 <!-- logo -->
                 <a href="#" class="logo">
@@ -23,19 +23,19 @@
                 </a>
                 <!-- 中部导航栏 -->
                 <ul class="head_nav">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">酷玩</a></li>
-                    <li><a href="#">导购</a></li>
-                    <li><a href="#">使用</a></li>
-                    <li><a href="#">报告</a></li>
+                    <li><a href="./home.html">首页</a></li>
+                    <li><a href="./kuwan.html">酷玩</a></li>
+                    <li><a href="./daogou.html">导购</a></li>
+                    <li><a href="./demo.html">使用</a></li>
+                    <li><a href="./14resport.html">报告</a></li>
                 </ul>
                 <!-- 搜索 注册 登录 -->
                 <div class="search_log_reg">
                     <div class="search">
                         <span></span>
                     </div>
-                    <span>注册</span>
-                    <span>登录</span>
+                    <a href="./16register.html">注册</a>
+                    <a href="./15login.html">登录</a>
                 </div>
             </div>
         </div>
@@ -51,19 +51,7 @@
             <!-- 商品详情 -->
             <div class="comm">
                 <div class="comm_big">
-                    <!-- <div class="comm_small">
-                        <img src="./img/bg5.jpg" alt="">
-                        <div class="comm_title">
-                            <span>可以检测</span>
-                        </div>
-                        <div class="price">
-                            <span>￥</span>
-                            <div class="xin">
-                                <span><img src="./img/xin.png"></span>
-                                <span><img src="./img/reply.png"></span>
-                            </div>
-                        </div>
-                    </div> -->
+                    <!-- 插入位置 -->
                 </div>
             </div>
             <!-- 加载更多...... -->
@@ -95,7 +83,7 @@
                 <ul class="foot_nav">
                     <li>免费试用
                         <ul>
-                            <li><a href="#">试用流程</a></li>
+                            <li><a href="./18freeTrial.html">试用流程</a></li>
                             <li><a href="#">如何提高成功率</a></li>
                         </ul>
                     </li>
@@ -124,7 +112,7 @@
                         <ul>
                             <li><a href="#">关于极果</a></li>
                             <li><a href="#">联系我们</a></li>
-                            <li><a href="#">商务合作：BD@jiguo.com</a></li>
+                            <li><a href="./17business.html">商务合作：BD@jiguo.com</a></li>
                             <li><a href="#">CEO邮箱：CEO@jiguo.com</a></li>
                         </ul>
                     </li>
@@ -138,32 +126,36 @@
 <script type="text/html" id="tpl">
     {{each res_new}}
         <div class="comm_small">
-            <img src="{{$value.img}}">
-            <div class="comm_title">
-                <span>{{$value.text}}</span>
-            </div>
-            <div class="price">
-                <span>{{$value.price}}</span>
-                <div class="xin">
-                    <span><img src="./img/xin.png">{{$value.like}}</span>
-                    <span><img src="./img/reply.png">{{$value.words}}</span>
+            <a href="./13daogouDetail.html">
+                <img src="{{$value.img}}">
+                <div class="comm_title">
+                    <span>{{$value.text}}</span>
                 </div>
-            </div>
+                <div class="price">
+                    <span>{{$value.price}}</span>
+                    <div class="xin">
+                        <span><img src="./img/xin.png">{{$value.like}}</span>
+                        <span><img src="./img/reply.png">{{$value.words}}</span>
+                    </div>
+                </div>
+            </a>
         </div>
     {{/each}}
     {{each res_hot}}
         <div class="comm_small">
-            <img src="{{$value.img}}">
-            <div class="comm_title">
-                <span>{{$value.text}}</span>
-            </div>
-            <div class="price">
-                <span>{{$value.price}}</span>
-                <div class="xin">
-                    <span><img src="./img/xin.png">{{$value.like}}</span>
-                    <span><img src="./img/reply.png">{{$value.words}}</span>
+            <a href="./13daogouDetail.html">
+                <img src="{{$value.img}}">
+                <div class="comm_title">
+                    <span>{{$value.text}}</span>
                 </div>
-            </div>
+                <div class="price">
+                    <span>{{$value.price}}</span>
+                    <div class="xin">
+                        <span><img src="./img/xin.png">{{$value.like}}</span>
+                        <span><img src="./img/reply.png">{{$value.words}}</span>
+                    </div>
+                </div>
+            </a>
         </div>
     {{/each}}
 </script>

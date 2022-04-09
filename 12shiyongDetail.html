@@ -11,29 +11,29 @@
 </head>
 
 <body>
-    <div class="header">
-        <!-- logo -->
-        <a href="#" class="logo">
-            <img src="./img/logonew.png">
-        </a>
-        <!-- 中部导航栏 -->
-        <ul class="head_nav">
-            <li><a href="#">首页</a></li>
-            <li><a href="#">酷玩</a></li>
-            <li><a href="#">导购</a></li>
-            <li><a href="#">使用</a></li>
-            <li><a href="#">报告</a></li>
-        </ul>
-        <!-- 搜索 注册 登录 -->
-        <div class="search_log_reg">
-            <div class="search">
-                <span></span>
+    <div class="top_header">
+        <div class="header">
+            <!-- logo -->
+            <a href="#" class="logo">
+                <img src="./img/logonew.png">
+            </a>
+            <!-- 中部导航栏 -->
+            <ul class="head_nav">
+                <li><a href="./home.html">首页</a></li>
+                <li><a href="./kuwan.html">酷玩</a></li>
+                <li><a href="./daogou.html">导购</a></li>
+                <li><a href="./demo.html">使用</a></li>
+                <li><a href="./14resport.html">报告</a></li>
+            </ul>
+            <!-- 搜索 注册 登录 -->
+            <div class="search_log_reg">
+                <div class="search">
+                    <span></span>
+                </div>
+                <a href="./16register.html">注册</a>
+                <a href="./15login.html">登录</a>
             </div>
-            <span>注册</span>
-            <span>登录</span>
         </div>
-
-
     </div>
     <br>
     <!-- HiFi 音响 -->
@@ -139,7 +139,15 @@
                 <img src="./img/myCode1.jpg" alt="">
             </div>
             <div class="bottom">
-
+                <div class="guid">
+                    <div class="tit">
+                        <h3>报告精选</h3>
+                        <p>发现更多<span></span></p>
+                    </div>
+                    <div class="guid_s">
+                        <!-- 插入位置 -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -166,7 +174,7 @@
             <ul class="foot_nav">
                 <li>免费试用
                     <ul>
-                        <li><a href="#">试用流程</a></li>
+                        <li><a href="./18freeTrial.html">试用流程</a></li>
                         <li><a href="#">如何提高成功率</a></li>
                     </ul>
                 </li>
@@ -195,21 +203,13 @@
                     <ul>
                         <li><a href="#">关于极果</a></li>
                         <li><a href="#">联系我们</a></li>
-                        <li><a href="#">商务合作：BD@jiguo.com</a></li>
+                        <li><a href="./17business.html">商务合作：BD@jiguo.com</a></li>
                         <li><a href="#">CEO邮箱：CEO@jiguo.com</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <div class="guid">
-            <div class="tit">
-                <h3>报告精选</h3>
-                <p>发现更多<span></span></p>
-            </div>
-            <div class="guid_s">
-                <!-- 插入位置 -->
-            </div>
-        </div>
+
     </div>
 </body>
 
@@ -217,40 +217,48 @@
 <script src="./js/template-web.js"></script>
 <script src="./js/jquery.min.js"></script>
 <script type="text/html" id="tpl">
-    {{each res_guid_}}
-    <div class="guid_comm">
+    {{each res_all}}
+    <div class="aaa">
         <a href="#">
-            <img src="{{$value.img}}" alt="">
-            <p>{{$value.text}}</p>
-            <div class="xin">
-                <p>
-                    <span><img src="./img/xin.png">{{$value.like}}</span>
-                    <span><img src="./img/reply.png">{{$value.words}}</span>
-                </p>
-            </div>
+            <img src="{{$value.img}}">
+            <h3>{{$value.text}}</h3>
+            <p class="aaa_btn"><span>{{$value.totalnum}}</span><span>{{$value.num}}台</span></p>
+            <p class="apply"><span>{{$value.apply}}</span>申请</p>
+            <p class="nums">报告数量 ：{{$value.num}}</p>
         </a>
+        <span class="posi">{{$value.info_ty}}</span>
     </div>
-{{/each}}
+    {{/each}}
 </script>
 
 <script>
-    //导购精选 数据渲染
-    function guid_() {
+    function all_() {
         $.ajax({
             type: "get",
-            url: "http://127.0.0.1:3000/guid/new",
-            success: (function (res_guid) {
-                var res_guid_ = []
-                for (var i = 0; i < 4; i++) {
-                    res_guid_.push(res_guid[i])
-                }
-                const guid = template('tpl', {
-                    res_guid_: res_guid_
+            url: "http://127.0.0.1:3000/report/new",
+            success: (function (res_all) {
+                res_all = res_all.slice(0, 4)
+                const all_ = template('tpl', {
+                    res_all: res_all
                 })
-                console.log(res_guid_)
-                $(".guid_s").html(guid);//渲染到页面
+                console.log(res_all)
+                $(".guid_s").html(all_);//渲染到页面
             })
         })
     }
-    guid_()
+    all_()
+    // 五一倒计时
+    function date_() {
+        // 获取当前时间
+        var date = new Date();
+        var date2 = new Date(2022, 4, 1)//五一时间
+        var date3 = date2 - date;
+        var d = parseInt(date3 / 1000 / 60 / 60 / 24);//天
+        var h = parseInt(date3 / 1000 / 60 / 60 % 24);//小时
+        var m = parseInt(date3 / 1000 / 60 % 60);//分钟
+        var s = parseInt(date3 / 1000 % 60);//秒
+        var str = '' + d + '天' + h + '时' + m + '分' + s + '秒';
+        $(".time_").text(str)
+    }
+    setInterval(date_, 1000);
 </script>
