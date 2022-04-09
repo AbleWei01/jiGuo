@@ -1,7 +1,15 @@
 // 两个按钮切换颜色
-$(".cont_btn span").click(function () {
+$(".cont_btn span").eq(0).click(function () {
+    all_()
     $(this).attr("index","1").siblings().removeAttr("index")
     $(this).addClass("col").siblings().removeClass("col")
+    $(".all_").addClass("coll").siblings().removeClass("coll")
+})
+$(".cont_btn span").eq(1).click(function () {
+    apply_()
+    $(this).attr("index","1").siblings().removeAttr("index")
+    $(this).addClass("col").siblings().removeClass("col")
+    $(".all_").addClass("coll").siblings().removeClass("coll")
 })
 // 大众试用  全部
 function all_() {

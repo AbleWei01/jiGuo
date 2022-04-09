@@ -10,7 +10,7 @@ var mySwiper = new Swiper('.swiper', {
     },
 
     autoplay: {
-        delay: 3000, // 每隔3秒切换一张图片
+        delay: 2000, // 每隔2秒切换一张图片
         stopOnLastSlide: false, //是否停留在最后一张  true是 （再loop模式下无效） false 不停留在最后一张
         disableOnInteraction: false, //用户操作swiper时 是否停止自动切换 true是  false 否
     },
